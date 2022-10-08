@@ -37,11 +37,8 @@
     "url": "https://github.com/mrshukhratbek/react-js-modal/issues"
   },
   "keywords": [],
-  "dependencies": {
-    "D": "^1.0.0",
-    "react": "^18.2.0"
-  },
   "devDependencies": {
+    "react": "^18.2.0",
     "@types/react": "^18.0.21"
   }
 }
