@@ -1,0 +1,47 @@
+{
+  "name": "modal-rc-ts",
+  "version": "0.0.2",
+  "description": "",
+  "author": "Shukhratbek Kobulov",
+  "license": "ISC",
+  "main": "./lib/cjs/index.js",
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/cjs/types/index.d.ts",
+  "homepage": "https://github.com/mrshukhratbek/react-js-modal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrshukhratbek/react-js-modal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrshukhratbek/react-js-modal/issues"
+  },
+  "keywords": [],
+  "dependencies": {
+    "D": "^1.0.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21"
+  }
+}
