@@ -38,7 +38,8 @@
   },
   "keywords": [],
   "devDependencies": {
-    "react": "^18.2.0",
-    "@types/react": "^18.0.21"
+    "@types/react": "^18.0.21",
+    "re-resizable": "^6.9.9",
+    "react": "^18.2.0"
   }
 }
