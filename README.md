@@ -1,7 +1,7 @@
 <h1 align="center">Modal react</h1>
 
 <div align="center">
-Modal (draggable, minimizing, maximizing) component for React.js
+Modal (draggable, resizable) component for React.js
 </div>
 <br>
 <div align="center">
@@ -42,5 +42,5 @@ function App() {
 
 ## API
 
-| Name                   | Type                           | Default   | Description                                                                     |
-| ---------------------- | ------------------------------ | --------- | ------------------------------------------------------------------------------- |
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
