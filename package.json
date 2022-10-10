@@ -1,6 +1,6 @@
 {
-  "name": "modal-rc-ts",
-  "version": "0.0.2",
+  "name": "draggable-resizable-modal",
+  "version": "0.0.1",
   "description": "",
   "author": "Shukhratbek Kobulov",
   "license": "ISC",
@@ -36,12 +36,21 @@
   "bugs": {
     "url": "https://github.com/mrshukhratbek/react-js-modal/issues"
   },
-  "keywords": [],
-  "dependencies": {
-    "D": "^1.0.0",
-    "react": "^18.2.0"
-  },
+  "keywords": [
+    "draggable-resizable-modal",
+    "react-component",
+    "component",
+    "draggable",
+    "resizable",
+    "frontend",
+    "dialog",
+    "modal",
+    "react",
+    "ui"
+  ],
   "devDependencies": {
-    "@types/react": "^18.0.21"
+    "@types/react": "^18.0.21",
+    "re-resizable": "^6.9.9",
+    "react": "^18.2.0"
   }
 }
