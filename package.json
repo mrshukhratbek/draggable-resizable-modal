@@ -1,6 +1,6 @@
 {
-  "name": "modal-rc-ts",
-  "version": "0.0.2",
+  "name": "modal-rc",
+  "version": "0.0.4",
   "description": "",
   "author": "Shukhratbek Kobulov",
   "license": "ISC",
@@ -37,11 +37,9 @@
     "url": "https://github.com/mrshukhratbek/react-js-modal/issues"
   },
   "keywords": [],
-  "dependencies": {
-    "D": "^1.0.0",
-    "react": "^18.2.0"
-  },
   "devDependencies": {
-    "@types/react": "^18.0.21"
+    "@types/react": "^18.0.21",
+    "re-resizable": "^6.9.9",
+    "react": "^18.2.0"
   }
 }
