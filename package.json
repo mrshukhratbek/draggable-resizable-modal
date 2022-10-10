@@ -1,7 +1,7 @@
 {
   "name": "draggable-resizable-modal",
   "version": "0.0.1",
-  "description": "",
+  "description": "Modal (draggable, resizable) component for React.js",
   "author": "Shukhratbek Kobulov",
   "license": "ISC",
   "main": "./lib/cjs/index.js",
