@@ -1,3 +1,3 @@
-import Mask from "./mask.component.js";
+import Mask from "./mask.component";
 
 export default Mask

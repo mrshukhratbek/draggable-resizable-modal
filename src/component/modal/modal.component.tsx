@@ -1,27 +1,26 @@
-import "./modal.css";
-import React from "react";
-import Mask from "./mask";
-import Content from "./content";
+import './modal.css';
+import React from 'react';
+import Mask from './mask';
+import Content from './content';
+import { ModalPropTypes } from '../modal-prop-types';
 
-export interface ModalProps {
-  open?: boolean;
-  mask?: boolean;
-  prefixCls: string;
-}
+export default function Modal(props: ModalPropTypes) {
+  const {
+    // General
+    prefixCls = 'drm-modal',
 
-const Modal: React.FC<ModalProps> = (props) => {
-  const { mask, prefixCls } = props;
+    // Mask
+    mask = true,
+  } = props;
 
   const modal = (
     <div className={`${prefixCls}-root`}>
       <Mask prefixCls={prefixCls} visible={mask} />
-      <div className={`${prefixCls}-wrapper drm-wrapper`}>
-        <Content />
+      <div tabIndex={-1} className={`${prefixCls}-wrapper drm-wrapper`}>
+        <Content {...props} prefixCls={prefixCls} />
       </div>
     </div>
   );
 
   return modal;
-};
-
-export default Modal;
+}
