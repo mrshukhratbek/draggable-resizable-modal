@@ -8,3 +8,21 @@
     0 9px 28px 8px #0000000d;
   pointer-events: auto;
 }
+
+.drm-modal {
+  margin: 0 auto;
+}
+
+.drm-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: #00000073;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}

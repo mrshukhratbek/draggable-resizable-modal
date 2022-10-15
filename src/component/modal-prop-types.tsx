@@ -17,6 +17,10 @@ export type ModalPropTypes = {
   width?: string | number;
   height?: string | number;
   top?: string | number;
+  onOk?: (...args: any[]) => any;
+  onCancel?: (...args: any[]) => any;
+  cancelText?: React.ReactNode;
+  okText?: React.ReactNode;
   // draggable?: boolean;
   // minimize?: boolean;
   // resizable?: boolean;
