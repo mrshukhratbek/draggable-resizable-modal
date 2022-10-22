@@ -1,0 +1,57 @@
+.drm-modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+    0 9px 28px 8px #0000000d;
+  pointer-events: auto;
+}
+
+.drm-modal {
+  margin: 0 auto;
+}
+
+.drm-modal-header {
+  padding: 10px 16px;
+  border-bottom: 1px solid #dedede;
+}
+
+.drm-modal-title {
+  font-weight: 500;
+}
+
+.drm-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: #00000073;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+}
+
+.drm-modal-close:hover {
+  opacity: 0.8;
+}
+
+.drm-modal-body {
+  padding: 20px;
+}
+
+.drm-modal-footer {
+  text-align: right;
+  border-top: 1px solid #dedede;
+  padding: 10px 16px;
+}

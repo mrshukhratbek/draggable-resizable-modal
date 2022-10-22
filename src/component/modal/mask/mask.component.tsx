@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import './mask.css';
 
 export type MaskProps = {
   prefixCls: string;

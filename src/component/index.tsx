@@ -1,19 +1,18 @@
-import "modal.css";
-import React from "react";
+import * as React from 'react';
+import type { ModalPropTypes } from './modal-prop-types';
+import Modal from './modal/modal.component';
+import Portal from '@rc-component/portal';
 
-export interface ModalProps {
-  open?: boolean;
-  title?: React.ReactNode;
-  children?: React.ReactNode;
-  draggable?: boolean;
-  minimize?: boolean;
-  resizable?: boolean;
-}
+const ModalWrap: React.FC<ModalPropTypes> = (props: ModalPropTypes) => {
+  const { open, getContainer } = props;
 
-const Modal: React.FC<ModalProps> = (props) => {
-  const modal = <div className="modal-rc"></div>;
-
-  return <>Modal</>;
+  return (
+    <Portal open={open} getContainer={getContainer} autoLock={open}>
+      <Modal {...props} />
+    </Portal>
+  );
 };
 
-export default Modal;
+ModalWrap.displayName = 'Modal';
+
+export default ModalWrap;
