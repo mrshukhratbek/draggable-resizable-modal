@@ -1,6 +1,6 @@
 {
   "name": "draggable-resizable-modal",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "description": "Modal (draggable, resizable) component for React.js",
   "author": "Shukhratbek Kobulov",
   "license": "ISC",
@@ -8,8 +8,8 @@
   "scripts": {
     "clean": "rm -rf ./lib",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs && copyfiles -u 1 src/**/*.css ./lib/esm",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json && copyfiles -u 1 src/**/*.css ./lib/cjs",
     "prepack": "npm run build"
   },
   "files": [
@@ -51,6 +51,7 @@
   "devDependencies": {
     "@rc-component/portal": "^1.0.0-9",
     "@types/react": "^18.0.21",
+    "copyfiles": "^2.4.1",
     "rc-util": "^5.24.4",
     "re-resizable": "^6.9.9",
     "react": "^18.2.0"
