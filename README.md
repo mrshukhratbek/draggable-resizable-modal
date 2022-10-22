@@ -1,4 +1,4 @@
-<h1 align="center">Modal react</h1>
+<h1 align="center">Modal (draggable, resizable) </h1>
 
 <div align="center">
 Modal (draggable, resizable) component for React.js
@@ -23,24 +23,36 @@ Modal (draggable, resizable) component for React.js
 
 ```sh
 // with npm
-npm install modal-rc
+npm install draggable-resizable-modal
+
 
 // with yarn
-yarn add modal-rc
+yarn add draggable-resizable-modal
+
 ```
 
 ## Usage
 
 ```jsx
 import * as React from "react";
-import Modal from "modal-rc";
+import Modal from "draggable-resizable-modal";
 
 function App() {
-  return <Modal>Content</Modal>;
+  return (
+    <Modal title="Modal title" open={true}>
+      Content
+    </Modal>
+  );
 }
 ```
 
 ## API
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
+| Property   | Description                                                                   | Type          | Default                 | Version |
+| ---------- | ----------------------------------------------------------------------------- | ------------- | ----------------------- | ------- |
+| bodyStyle  | Body style for modal body element. Such as height, padding etc                | CSSProperties |                         |         |
+| cancelText | Text of the Cancel button                                                     | ReactNode     | `Cancel`                |         |
+| closable   | Whether a close (x) button is visible on top right of the modal dialog or not | boolean       | true                    |         |
+| closeIcon  | Custom close icon                                                             | ReactNode     | &lt;CloseOutlined />    |         |
+| footer     | Footer content, set as `footer={null}` when you don't need default buttons    | ReactNode     | (OK and Cancel buttons) |         |
+| mask       | Whether show mask or not                                                      | boolean       | true                    |         |
