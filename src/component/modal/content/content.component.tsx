@@ -7,12 +7,12 @@ const Content: React.FC<ModalPropTypes> = (props: ModalPropTypes) => {
     prefixCls,
     children = <>Content</>,
     bodyStyle,
-    footer = true,
-    title = 'Modal title',
+    footer,
+    title,
     closable = true,
     onClose,
     closeIcon = '×',
-    width = 550,
+    width = 500,
     height,
     style,
     top = 150,
@@ -29,14 +29,16 @@ const Content: React.FC<ModalPropTypes> = (props: ModalPropTypes) => {
 
   let footerNode: React.ReactNode;
   if (footer) {
-    footerNode = <div className={`${prefixCls}-footer`}>{footer}</div>;
+    footerNode = (
+      <div className={`${prefixCls}-footer drm-modal-footer`}>{footer}</div>
+    );
   }
 
   let headerNode: React.ReactNode;
   if (title) {
     headerNode = (
-      <div className={`${prefixCls}-header`}>
-        <div className={`${prefixCls}-title`}>{title}</div>
+      <div className={`${prefixCls}-header drm-modal-header`}>
+        <div className={`${prefixCls}-title drm-modal-title`}>{title}</div>
       </div>
     );
   }
@@ -48,7 +50,7 @@ const Content: React.FC<ModalPropTypes> = (props: ModalPropTypes) => {
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className={`${prefixCls}-close drm-close`}
+        className={`${prefixCls}-close drm-modal-close`}
       >
         {closeIcon}
       </button>
@@ -59,7 +61,7 @@ const Content: React.FC<ModalPropTypes> = (props: ModalPropTypes) => {
     <div className={`${prefixCls}-content drm-modal-content`} style={{ top }}>
       {closer}
       {headerNode}
-      <div className={`${prefixCls}-body`} style={bodyStyle}>
+      <div className={`${prefixCls}-body drm-modal-body`} style={bodyStyle}>
         {children}
       </div>
       {footerNode}

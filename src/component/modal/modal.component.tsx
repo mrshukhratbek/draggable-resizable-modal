@@ -12,29 +12,43 @@ export default function Modal(props: ModalPropTypes) {
     // Mask
     mask = true,
 
-    onCancel,
     cancelText = 'Cancel',
-
-    onOk,
+    footer,
     okText = 'Ok',
   } = props;
 
   const handleCancel = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const { onCancel } = props;
-    onCancel?.(e);
+    const { onCancel, onClose } = props;
+    if (!onCancel) {
+      onClose?.(e);
+    } else {
+      onCancel?.(e);
+    }
   };
 
   const handleOk = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const { onOk } = props;
-    onOk?.(e);
+    const { onOk, onClose } = props;
+
+    if (!onOk) {
+      onClose?.(e);
+    } else {
+      onOk?.(e);
+    }
   };
 
-  const defaultFooter = (
-    <>
-      <button onClick={handleCancel}>{cancelText}</button>
-      <button onClick={handleOk}>{okText}</button>
-    </>
-  );
+  const defaultFooter =
+    footer === undefined ? (
+      <>
+        <button className="drm-footer-btn" onClick={handleCancel}>
+          {cancelText}
+        </button>
+        <button className="drm-footer-btn drm-footer-ok-btn" onClick={handleOk}>
+          {okText}
+        </button>
+      </>
+    ) : (
+      footer
+    );
 
   const modal = (
     <div className={`${prefixCls}-root`}>

@@ -13,7 +13,16 @@
   margin: 0 auto;
 }
 
-.drm-close {
+.drm-modal-header {
+  padding: 10px 16px;
+  border-bottom: 1px solid #dedede;
+}
+
+.drm-modal-title {
+  font-weight: 500;
+}
+
+.drm-modal-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -25,4 +34,24 @@
   outline: 0;
   cursor: pointer;
   transition: color 0.3s;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+}
+
+.drm-modal-close:hover {
+  opacity: 0.8;
+}
+
+.drm-modal-body {
+  padding: 20px;
+}
+
+.drm-modal-footer {
+  text-align: right;
+  border-top: 1px solid #dedede;
+  padding: 10px 16px;
 }

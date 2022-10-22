@@ -8,3 +8,12 @@
   overflow: auto;
   outline: 0;
 }
+
+.drm-footer-btn {
+  padding: 4px 15px;
+  cursor: pointer;
+}
+
+.drm-footer-ok-btn {
+  margin-left: 8px;
+}
